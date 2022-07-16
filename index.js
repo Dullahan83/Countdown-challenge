@@ -8,13 +8,11 @@ input.addEventListener("change", (e) =>{
 
 const chosenDay = new Date(localStorage.getItem("chosenDate"));
 
-
 function countdown(){
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
     const day = hour * 24;
-
     let now = new Date();
     let timeDiff = chosenDay - now;
 
@@ -68,10 +66,9 @@ function countdown(){
     }
 }
 countdown()
-
-
+setInterval(countdown, 1000)
 
 const button = document.querySelector("#bonus button")
 button.addEventListener("click", () => {
-    const interval = setInterval(countdown, 1000)
+    location.reload()
 })
