@@ -1,0 +1,69 @@
+#container{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 0 10rem 0;
+    h3{
+        text-align: center;
+        letter-spacing: 0.6rem;
+    }
+}
+
+.countdown{
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    &--parts{
+        display: flex;
+        width: 23vw;
+        height: 200px;
+        justify-content: center;
+        align-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        color: hsl(237, 18%, 59%);
+        padding: 0 0.5rem;
+        @media screen and (min-width:768px) {
+            margin: 0;
+        }
+        p{
+            font-size: 1.9vw;
+            letter-spacing: 0.2rem;
+            @media screen and (min-width:768px) {
+                font-size: 14px;
+                letter-spacing: 0.1;
+            }
+        }
+        
+    }
+    @media screen and (min-width:768px) {
+        width: 700px;
+    }
+}
+
+#bonus{
+    display: flex;
+    flex-direction: column;
+    color: $primary;
+    h4{
+        margin: 0.5rem;
+    }
+    button{
+        margin-top: 1rem;
+        text-transform: uppercase;
+        background-color: rgb(44, 44, 68);
+        padding: 0.5rem;
+        border-radius: 20px;
+        color: $secondary;
+        border: 1px solid $primary;
+        &:hover{
+            cursor: pointer;
+            border-color: $secondary;
+        }
+    }
+}
+

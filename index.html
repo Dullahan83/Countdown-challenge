@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/style.css">
+  
+  <title>Frontend Mentor | Launch countdown timer</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- We're launching soon
+
+  Days
+  Hours
+  Minutes
+  Seconds -->
+  
+  <div id="backGround">
+    <img src="./images/bg-stars.svg" alt="backGroundStars" class="bg-stars">
+    <img src="./images/pattern-hills.svg" alt="backGroundHills" class="bg-hills">
+  </div>
+  <div id="container">
+    <h3>We're launching soon</h3>
+    <div class="countdown">
+      <div class="countdown--parts">
+        <div class="cell days">
+          <div class="line-container"><hr></div>
+          <div class="numberContainer">
+            <p class="num ten"></p>
+            <p class="num one"></p>
+          </div>
+        </div>
+        <p>Days</p>
+      </div>  
+      <div class="countdown--parts">
+        <div class="cell hours">
+          <div class="line-container"><hr></div>
+          <div class="numberContainer">
+            <p class="num ten"></p>
+            <p class="num one"></p>
+          </div>
+        </div>
+        <p>Hours</p>
+      </div>
+      <div class="countdown--parts">
+        <div class="cell minutes">
+          <div class="line-container"><hr></div>
+          <div class="numberContainer">
+            <p class="num ten"></p>
+            <p class="num one"></p>
+          </div>
+        </div>
+        <p>Minutes</p>
+      </div>
+      <div class="countdown--parts">
+        <div class="cell seconds">
+          <div class="line-container"><hr></div>
+          <div class="numberContainer">
+            <p class="num ten"></p>
+            <p class="num one"></p>
+          </div>
+        </div>
+        <p>Seconds</p>
+      </div>
+    </div>
+    <div id="bonus">
+      <h4>select launch date</h4>
+      <input type="datetime-local" id="chosenDate" >
+      <button>Start countdown</button>
+    </div>
+  </div>
+  <div id="socialLinks">
+    <img src="./images/icon-facebook.svg" alt="">
+    <img src="./images/icon-pinterest.svg" alt="">
+    <img src="./images/icon-instagram.svg" alt="">
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
