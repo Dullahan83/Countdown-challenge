@@ -3,24 +3,32 @@
     height: 100vh;
     
     .bg-stars{
-        position: fixed;
+        position: absolute;
         height: 100%;
-        z-index: -5;
-        @include background;
+        z-index: 0;
         width: 100%;
+        top: -14vh;
         object-fit: cover;
+        object-position: 47.5%;
         @media screen and (min-width: 768px) {
             object-fit: contain;
+            object-position: 0%;
         }
     }
     .bg-hills{
         width: 100%;
         background-color: transparent;
         position: absolute;
-        z-index: -2;
+        z-index: 0;
         bottom: 0;
-        height: 21%;
-        object-fit: fill;
-        
+        right: 0;
+        height: 25%;
+        object-fit: cover;
+        object-position: 82.8%;
+        @media screen and(min-width: 768px) {
+            object-fit: fill;
+            object-position: 0%;
+        }
     }
+    
 }

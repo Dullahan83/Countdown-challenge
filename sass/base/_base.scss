@@ -13,4 +13,10 @@ body{
     text-transform: uppercase;
     color: white;
     font-size: 14px;
+    position: relative;
+    @include background;
+}
+
+.attribution{
+    z-index: 0;
 }

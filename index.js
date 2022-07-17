@@ -1,12 +1,13 @@
-const input = document.getElementById("chosenDate")
+/* const input = document.getElementById("chosenDate")
 input.addEventListener("change", (e) =>{
     let inputValue = e.target.value
     localStorage.setItem("chosenDate", inputValue)
-})
+}) */
 
 
 
-const chosenDay = new Date(localStorage.getItem("chosenDate"));
+let chosenDay = new Date(localStorage.getItem("chosenDate") ? localStorage.getItem("chosenDate") : '2022-07-30');
+
 
 function countdown(){
     const second = 1000;
@@ -20,7 +21,15 @@ function countdown(){
     const minutes = Math.floor(timeDiff % hour / minute)
     const hours = Math.floor(timeDiff % day / hour)
     const days = Math.floor(timeDiff / day)
+    if((timeDiff -1) < 0){
+        localStorage.clear("chosenDate")
+        clearInterval(myInterval)
+        /* location.reload(); */
+    }
+    displayDate(timeDiff, seconds, minutes, hours, days)
+}
 
+function displayDate(timeDiff, seconds, minutes, hours, days){
     if(timeDiff > 0){
         if(seconds < 10){
             document.querySelector(".seconds .ten").textContent = "0"
@@ -65,10 +74,13 @@ function countdown(){
         });
     }
 }
-countdown()
-setInterval(countdown, 1000)
 
-const button = document.querySelector("#bonus button")
+
+
+countdown()
+myInterval = setInterval(countdown, 1000)
+
+/* const button = document.querySelector("#bonus button")
 button.addEventListener("click", () => {
     location.reload()
-})
+}) */

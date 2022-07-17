@@ -1,14 +1,17 @@
 #socialLinks{
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
+    margin-bottom: 2rem;
     z-index: 0;
-    img{
+    fill: #8385a9;
+    svg{
         margin: 0 1rem;
         &:hover{
             cursor: pointer;
             fill: $secondary;
         }
     }
-    
+    @media screen and (min-width: 768px) {
+        margin-bottom: 4rem;
+    }
 }

@@ -4,12 +4,18 @@
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
     flex-direction: column;
     padding: 0 0 10rem 0;
     h3{
         text-align: center;
-        letter-spacing: 0.6rem;
+        letter-spacing: 0.5rem;
+        margin-top: 18vh;
+        padding: 0 1.5rem;
+        font-size: 16px;
+        @media screen and (min-width: 768px) {
+            margin-top: 17vh;
+            font-size: 21px;
+        }
     }
 }
 
@@ -17,6 +23,9 @@
     display: flex;
     height: fit-content;
     justify-content: space-between;
+    @media screen and(min-width: 768px) {
+        margin-top: 11.5vh;
+    }
     &--parts{
         display: flex;
         width: 23vw;
